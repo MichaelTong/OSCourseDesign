@@ -9,7 +9,7 @@
 {{ content }}
 <!-- /#main -->
 
-
+{% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
 {% include footer.html %}         
 
 </body>

@@ -1,0 +1,11 @@
+title:            Operating System Course Design, BUAA
+description:      It's the home page for OS Course Design by Michael Tong.
+disqus_shortname: michaeltong
+#Your site's domain goes here. Leave localhost server or blank when working locally.
+url:             http://michael-tong.com/OSCourseDesign/
+
+# Owner/author information
+owner:
+  name:           Michael Tong
+  
+

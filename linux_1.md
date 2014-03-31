@@ -1,3 +1,14 @@
+---
+layout: page
+permalink: /Linux_1/
+title: Linux_1
+image:
+  feature: aboutme3.jpg
+  credit: 
+  creditlink: 
+share: true
+---
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by Free CSS Templates

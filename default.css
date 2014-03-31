@@ -781,7 +781,7 @@
 		color: #FFFFFF;
 	}
 
-#page #disqus_thread {
+#disqus_thread {
   padding: 10px 15px;
   margin: 40px 2px 20px 2px;
   background-color: #ffffff;
@@ -790,20 +790,3 @@
           border-radius: 3px;
   box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
 }
-
-@media only screen and (min-width: 48em) {
-  #page #disqus_thread {
-    padding: 20px 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-
-@media only screen and (min-width: 62.5em) {
-  #page #disqus_thread {
-    max-width: 800px;
-    padding: 50px 80px;
-    margin: 0 auto 30px auto;
-  }
-}
-	

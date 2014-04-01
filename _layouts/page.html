@@ -5,14 +5,11 @@
 </head>
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 <body>
-
 {{ content }}
 <!-- /#main -->
-
 <div id="back1">
-{% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+	{% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
 </div>
 {% include footer.html %}         
-
 </body>
 </html>

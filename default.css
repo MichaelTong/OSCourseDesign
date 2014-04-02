@@ -487,9 +487,8 @@
 	#portfolio
 	{
 		overflow: hidden;
-		padding-top: 5em;
+		padding-top: 3em;
 		text-align: center;
-		border-top: 1px solid rgba(0,0,0,0.2);
 	}
 	
 	#portfolio .box
@@ -522,20 +521,23 @@
 	{	
 		float: left;
 		width: 26.666666667%;
-		padding: 80px 3.333333%;
+		padding: 0 3.333333%;
 	}
+
 	
 
 /*********************************************************************************/
 /* Four Columns                                                                 */
 /*********************************************************************************/
-
+	.fc
+	{
+		border-top: 1px solid rgba(0,0,0,0.2);
+	}
 	#four-column
 	{
 		overflow: hidden;
-		margin-top: 5em;
+		margin-top: 1em;
 		padding-top: 1em;
-		border-top: 1px solid rgba(0,0,0,0.2);
 		text-align: center;
 	}
 	
@@ -569,8 +571,8 @@
 	#four-column #tbox4
 	{
 		width: 23.5%;
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 	}
 	#four-column #tbox1,
 	#four-column #tbox2,
@@ -580,6 +582,26 @@
 		margin-right: 2%;
 	}
 	#four-column #tbox4
+	{
+		float: right;
+	}
+	#four-column #b1,
+	#four-column #b2,
+	#four-column #b3,
+	#four-column #b4
+	{
+		width: 23.5%;
+		padding-top: 0px;
+		padding-bottom: 4em;
+	}
+	#four-column #b1,
+	#four-column #b2,
+	#four-column #b3
+	{
+		float: left;
+		margin-right: 2%;
+	}
+	#four-column #b4
 	{
 		float: right;
 	}

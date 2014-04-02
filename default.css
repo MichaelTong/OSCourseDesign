@@ -486,7 +486,11 @@
 	#disqus_thread 
 	{
   		padding: 10px 1.25%;
-  		margin: 40px 2% 20px 2%;
+  		margin-top: 40px;
+		margin-bottom: 20px;
+		margin-right: auto;
+		margin-left: auto;
+		width: 96%
   		background-color: #ffffff;
   		-webkit-border-radius: 3px;
      		-moz-border-radius: 3px;

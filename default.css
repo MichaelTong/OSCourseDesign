@@ -175,6 +175,7 @@
 	#menu
 	{
 		height: 60px;
+		display: none;
 	}
 	
 	#menu ul
@@ -209,6 +210,100 @@
 		color: #2056ac;
 	}
 	
+	.nav,.nav ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+
+	.nav {
+		position:relative;
+	}
+
+	.nav ul {
+		height:0;
+		left:0;
+		overflow:hidden;
+		position:absolute;
+		top:46px;
+	}
+
+	.nav li {
+		position:relative;
+	}
+
+	.nav li a {
+		-moz-transition:0.5s;
+		-o-transition:0.5s;
+		-webkit-transition:0.5s;
+		background-color:#2056AC;
+		border:1px solid #FFF;
+		color:#FFF;
+		display:block;
+		font-size: 1.3em;
+		font-weight: 600;
+		line-height:35px;
+		padding:5px 20px;
+		text-decoration:none;
+		transition:0.5s;
+		text-align: center;
+		max-width: 1200px;
+	}
+
+	.nav li:hover > a {
+		background:#8CCA33;
+		border-color:#2056AC;
+		color:#FFF;
+	}
+
+	.nav li:hover ul.subs {
+		height:auto;
+		width:100%;
+	}
+
+	.nav ul li {
+		-moz-transition:0.5s;
+		-o-transition:0.5s;
+		-webkit-transition:0.5s;
+		opacity:0;
+		transition:0.5s;
+		width:100%;
+	}
+
+	.nav li ul li {
+		-moz-transition-delay:0s;
+		-o-transition-delay:0s;
+		-webkit-transition-delay:0s;
+		transition-delay:0s;
+	}
+
+	.nav li:hover ul li {
+		opacity:1;
+		-moz-transition-delay:0.5s;
+		-o-transition-delay:0.5s;
+		-webkit-transition-delay:0.5s;
+		transition-delay:0.5s;
+	}
+
+	.nav ul li a {
+		background:#2056AC;
+		border-color:#FFF;
+		color:#FFF;
+		line-height:1px;
+		-moz-transition:1.5s;
+		-o-transition:1.5s;
+		-webkit-transition:1.5s;
+		transition:1.5s;
+	}
+
+	.nav li:hover ul li a {
+		line-height:35px;
+	}
+
+	.nav ul li a:hover {
+		background:#8CCA33;
+	}
+
 /*********************************************************************************/
 /* Wrapper                                                                       */
 /*********************************************************************************/
@@ -505,6 +600,8 @@
 		#footer-small {display: none;}
 	}
 	@media screen and (min-width: 555px) {
+		.nav{display: none;}
+		#menu{display: block;}
 	}
 	@media screen and (min-width: 640px) {
 		#four-column {display: block;}

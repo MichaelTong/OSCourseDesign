@@ -613,10 +613,14 @@
 		max-width: 700px;
 		border-top: 1px solid rgba(0,0,0,0.2);
 	}
+	#doc h5
+	{
+		font-size: 0.9em;
+	}
 	#index
 	{
 		font-family: Helvetica;
-		font-size:1em;
+		font-size: 0.9em;
 		width: 56%;
 		margin-right: auto;
 		margin-left: auto;

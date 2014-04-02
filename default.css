@@ -486,12 +486,13 @@
 	#disqus_thread 
 	{
   		padding: 10px 1.25%;
-  		margin: 40px 22.5% 20px 22.5%;
+  		margin: 40px 2% 20px 22.5%;
   		background-color: #ffffff;
   		-webkit-border-radius: 3px;
      		-moz-border-radius: 3px;
           		border-radius: 3px;
   		box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
+		max-width: 600px;
 	}
 
 	@media screen and (min-width: 523px) {

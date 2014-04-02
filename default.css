@@ -9,7 +9,7 @@
 		padding: 0px;
 		background: #2056ac;
 		font-family: 'Questrial', sans-serif;
-		font-size: 12pt;
+		font-size: 10pt;
 		color: rgba(0,0,0,.6);
 	}
 	
@@ -76,98 +76,7 @@
 		width: 100%;
 	}
 
-/*********************************************************************************/
-/* Image Style                                                                   */
-/*********************************************************************************/
-
-	.image
-	{
-		display: inline-block;
-		border: 1px solid rgba(0,0,0,.1);
-	}
 	
-	.image img
-	{
-		display: block;
-		width: 100%;
-	}
-	
-	.image-full
-	{
-		display: block;
-		width: 100%;
-		margin: 0 0 3em 0;
-	}
-	
-	.image-left
-	{
-		float: left;
-		margin: 0 2em 2em 0;
-	}
-	
-	.image-centered
-	{
-		display: block;
-		margin: 0 0 2em 0;
-	}
-	
-	.image-centered img
-	{
-		margin: 0 auto;
-		width: auto;
-	}
-
-/*********************************************************************************/
-/* List Styles                                                                   */
-/*********************************************************************************/
-
-	ul.style1
-	{
-	}
-
-
-/*********************************************************************************/
-/* Social Icon Styles                                                            */
-/*********************************************************************************/
-
-	ul.contact
-	{
-		margin: 0;
-		padding: 2em 0em 0em 0em;
-		list-style: none;
-	}
-	
-	ul.contact li
-	{
-		display: inline-block;
-		padding: 0em 0.10em;
-		font-size: 1em;
-	}
-	
-	ul.contact li span
-	{
-		display: none;
-		margin: 0;
-		padding: 0;
-	}
-	
-	ul.contact li a
-	{
-		color: #FFF;
-	}
-	
-	ul.contact li a:before
-	{
-		display: inline-block;
-		background: #4C93B9;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		text-align: center;
-		color: rgba(255,255,255,1);
-	}
-	
-
 /*********************************************************************************/
 /* Button Style                                                                  */
 /*********************************************************************************/
@@ -183,48 +92,6 @@
 		text-decoration: none;
 		font-size: 1em;
 		color: #FFF;
-	}
-	
-	.button:before
-	{
-		display: inline-block;
-		background: #8DCB89;
-		margin-right: 1em;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: center;
-		color: #272925;
-	}
-	
-	.button-small
-	{
-	}
-	
-	.button-code
-	{
-		display: inline-block;
-		margin-top: 2em;
-		padding: 0.8em 2em;
-		background: #64ABD1;
-		line-height: 1.8em;
-		letter-spacing: 1px;
-		text-decoration: none;
-		font-size: 1em;
-		color: #FFF;
-	}
-	.button-code:before
-	{
-		display: inline-block;
-		background: #8DCB89;
-		margin-right: 1em;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: center;
-		color: #272925;
 	}
 		
 /*********************************************************************************/
@@ -300,8 +167,6 @@
 	{
 		color: rgba(255,255,255,0.8);
 	}
-	
-	
 
 /*********************************************************************************/
 /* Menu                                                                          */
@@ -344,12 +209,6 @@
 		color: #2056ac;
 	}
 	
-	#menu .current_page_item a
-	{
-	}
-	
-
-
 /*********************************************************************************/
 /* Wrapper                                                                       */
 /*********************************************************************************/
@@ -365,27 +224,6 @@
 		max-width: 1200px;
 	}
 
-	#wrapper1
-	{
-		background: #FFF;
-	}
-
-	#wrapper2
-	{
-		overflow: hidden;
-		background: #F3F3F3;
-		padding: 5em 0em;
-		text-align: center;
-	}
-
-	#wrapper3
-	{
-	}
-	
-	#wrapper4
-	{
-	}
-
 /*********************************************************************************/
 /* Welcome                                                                       */
 /*********************************************************************************/
@@ -397,26 +235,10 @@
 		padding: 6em 8.33333333% 0em 8.33333333%;
 		text-align: center;
 	}
-	
-	#welcome .content
-	{
-		padding: 0em 8em;
-	}
-	
-	#welcome .title h2
-	{
-	}
-	
-	#welcome a,
-	#welcome strong
-	{
-	}
-
 
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
-
 	#footer
 	{
 		margin-left: auto;
@@ -425,10 +247,8 @@
 		padding: 5em 0em;
 		text-align: center;
 		max-width: 1200px;
+		display: none;
 	}
-
-
-		
 	#footer .fbox1,
 	#footer .fbox2,
 	#footer .fbox3
@@ -449,6 +269,15 @@
 	#footer .title span
 	{
 		color: rgba(255,255,255,0.4);
+	}
+	#footer-small
+	{		
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		padding: 5em 0em;
+		text-align: center;
+		max-width: 522px;
 	}
 
 /*********************************************************************************/
@@ -478,6 +307,11 @@
 		color: rgba(255,255,255,0.8);
 	}
 
+	.fc
+	{
+		border-top: 1px solid rgba(0,0,0,0.2);
+		display: none;
+	}
 	
 /*********************************************************************************/
 /* Portfolio                                                                     */
@@ -515,6 +349,8 @@
 		color: rgba(0,0,0,0.8);
 	}
 
+	#portfolio .description{display: none;}
+	
 	.column1,
 	.column2,
 	.column3
@@ -524,21 +360,17 @@
 		padding: 0 3.333333%;
 	}
 
-	
-
 /*********************************************************************************/
 /* Four Columns                                                                 */
 /*********************************************************************************/
-	.fc
-	{
-		border-top: 1px solid rgba(0,0,0,0.2);
-	}
+
 	#four-column
 	{
 		overflow: hidden;
 		margin-top: 1em;
 		padding-top: 1em;
 		text-align: center;
+		display: none;
 	}
 	
 	#four-column h2
@@ -548,23 +380,6 @@
 		font-weight: 700;
 	}
 	
-	#four-column .icon
-	{
-		position: relative;
-		display: block;
-		margin: 0px auto 0.80em auto;
-		background: none;
-		line-height: 150px;
-		font-size: 4em;
-		width: 150px;
-		height: 150px;
-		border-radius: 100px;
-		border: 6px solid #67128F;
-		text-align: center;
-		color: #FFF;
-		
-	}
-		
 	#four-column #tbox1,
 	#four-column #tbox2,
 	#four-column #tbox3,
@@ -606,6 +421,8 @@
 		float: right;
 	}
 	
+	#four-column .description {display: none;}
+
 	#four-column .title
 	{
 		text-align: center;
@@ -627,7 +444,6 @@
 	{
 		border-top-color: #292929;
 	}
-	
 	
 	ul.tools
 	{
@@ -676,4 +492,20 @@
      		-moz-border-radius: 3px;
           		border-radius: 3px;
   		box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	@media screen and (min-width: 523px) {
+		.fc {display: block;}
+		#footer {display: block;}
+		#footer-small {display: none;}
+	}
+	@media screen and (min-width: 555px) {
+	}
+	@media screen and (min-width: 640px) {
+		#four-column {display: block;}
+		#four-column .description { display: inline-block}
+	}
+	@media screen and (min-width: 960px){	
+		body{font-size: 12pt;}
+		#portfolio .description{display: inline-block;}
 	}

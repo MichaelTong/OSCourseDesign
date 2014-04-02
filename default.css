@@ -593,11 +593,16 @@
   		box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
 		max-width: 600px;
 	}
-
+	#link1
+	{
+		display: none;
+	}
 	@media screen and (min-width: 523px) {
 		.fc {display: block;}
 		#footer {display: block;}
 		#footer-small {display: none;}
+		#link1{display: inline;}
+		#link2{display: none;}
 	}
 	@media screen and (min-width: 555px) {
 		.nav{display: none;}

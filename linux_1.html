@@ -110,28 +110,343 @@ comments: true
 			<h5 id="C211">2.1.1 Grammar State Graph</h5>
 			<b>(1) Command Line: line</b>
 			<img src="{{ site.url }}images/linux_1/1.jpg"  alt="" />
+			
 			<b>(2) Command: command</b>
+			<img src="{{ site.url }}images/linux_1/2.jpg"  alt="" />
+			
 			<b>(3) Front End Commands: fgCommand</b>
+			<img src="{{ site.url }}images/linux_1/3.jpg"  alt="" />
+			
 			<b>(4) Simple Commands: simpleCmd</b>
+			<img src="{{ site.url }}images/linux_1/4.jpg"  alt="" />
+			
 			<b>(5) Compond Commands: compondCmd</b>
+			<img src="{{ site.url }}images/linux_1/5.jpg"  alt="" />
+			
 			<b>(6) Next COmmand: nextCmd</b>
+			<img src="{{ site.url }}images/linux_1/6.jpg"  alt="" />
+			
 			<b>(7) Program Calls: ProgInvocation</b>
+			<img src="{{ site.url }}images/linux_1/7.jpg"  alt="" />
+			
 			<b>(8) Input Redirection: inputRedirect</b>
+			<img src="{{ site.url }}images/linux_1/8.jpg"  alt="" />
+			
 			<b>(9) Output Redirection: outputRedirect</b>
+			<img src="{{ site.url }}images/linux_1/9.jpg"  alt="" />
+			
 			<b>(10) Command Arguments: args</b>
+			<img src="{{ site.url }}images/linux_1/10.jpg"  alt="" />
+			
 			<b>(11) String: STR</b>
+			<img src="{{ site.url }}images/linux_1/11.jpg"  alt="" />
+			
 			<b>(12) Wildcards: rex</b>
+			<img src="{{ site.url }}images/linux_1/12.jpg"  alt="" />
+			
 			<h5 id="C212">2.1.2 Program Structure Graph</h5>
+			<img src="{{ site.url }}images/linux_1/13.jpg"  alt="" />
+			
 			<h5 id="C213">2.1.3 Terminal Control Procedure Graph</h5>
+			<img src="{{ site.url }}images/linux_1/14.jpg"  alt="" />
+			
 			<h5 id="C214">2.1.4 Tab Making Up Procedure Graph</h5>
+			<img src="{{ site.url }}images/linux_1/15.jpg"  alt="" />
+			
 			<h5 id="C215">2.1.5 Simple Commands Execution Procedure Graph</h5>
+			<img src="{{ site.url }}images/linux_1/16.jpg"  alt="" />
+			
 			<h5 id="C216">2.1.6 Compond Commands Execution Procedure Graph</h5>
+			<img src="{{ site.url }}images/linux_1/17.jpg"  alt="" />
+			
 			<h5 id="C217">2.1.7 Wildcard Procedure</h5>
+			<img src="{{ site.url }}images/linux_1/18.jpg"  alt="" />
+			
 			<h5 id="C218">2.1.8 Use Case Graph</h5>
+			<img src="{{ site.url }}images/linux_1/19.jpg"  alt="" />
+			
 			
 			<h4 id="C22">2.2 Function Design</h4>
 			<h5 id="C221">2.2.1 Important Data Structures</h5>
 			<h5 id="C222">2.2.2 Important Functions and Interfaces</h5>
+			<b>(1) bison.tab.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">int main(int argc, char** argv)</span><br />
+			<b>Funtion Functions</b>: <span>Main function</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				main arguments
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">int yylex()</span><br />
+			<b>Funtion Functions</b>: <span>Lexical analysis</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void yyerror(const char *s)</span><br />
+			<b>Funtion Functions</b>: <span>Display lexical errors</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				const char	*s 			Error Code
+			</pre>
+			</p>
+			
+			<b>(2) init.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">extern void getEnvPath(int len, char *buf)</span><br />
+			<b>Funtion Functions</b>: <span>Get environment path</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int len					Length of buff
+				char *buff				File path
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void init()</span><br />
+			<b>Funtion Functions</b>: <span>Initial</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			</p>
+			
+			<b>(3) execute.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">int exists(char *cmdFile)</span><br />
+			<b>Funtion Functions</b>: <span>Judge if a command exist</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char *cmdFile	 		Command to be judged
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">int str2Pid(char *str, int start, int end)</span><br />
+			<b>Funtion Functions</b>: <span>Transfer string to integere Pid</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char *str				String to be transferred
+				int	start				Starting index
+				int	end					Ending index
+			
+			<b>Function Format</b>: <span class="grey">void justArgs(char *str)</span><br />
+			<b>Funtion Functions</b>: <span>Adjust format for some external commands</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char	*str			Command string
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void release()</span><br />
+			<b>Funtion Functions</b>: <span>Free environment variables</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void addHistory(char *cmd)</span><br />
+			<b>Funtion Functions</b>: <span>Add history records</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char	*cmd			Command string to addHistory
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void freeSimpleCmd(SimpleCmd *scmd)</span><br />
+			<b>Funtion Functions</b>: <span>Free simple command space</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				SimpleCmd *scmd			Target command
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void freeCompondCmd(CompondCmd *ccmd)</span><br />
+			<b>Funtion Functions</b>: <span>Free compond command space</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				CompondCmd *ccmd		Target command
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">SimpleCmd* handleSimpleCmdStr(int begin, int end)</span><br />
+			<b>Funtion Functions</b>: <span>Resolve simple command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int begin				Starting index
+				int end					Ending index
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">CompondCmd* handleCompondCmdStr(int begin, int end)</span><br />
+			<b>Funtion Functions</b>: <span>Resolve compond command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int begin				Starting index
+				int end					Ending index
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">int prepareOutCmd(SimpleCmd *cmd)</span><br />
+			<b>Funtion Functions</b>: <span>Prepare for execution of external commands</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				SimpleCmd *cmd			Target simple command pointer
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">int execOuterCmd(SimpleCmd *cmd)</span><br />
+			<b>Funtion Functions</b>: <span>Execute external command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				SimpleCmd *cmd			Target simple command pointer
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void execSimpleCmd(SimpleCmd *cmd)</span><br />
+			<b>Funtion Functions</b>: <span>Execute simple command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				SimpleCmd *cmd			Target simple command pointer
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">int execCompondCmd(CompondCmd *cmd)</span><br />
+			<b>Funtion Functions</b>: <span>Execute compond command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				CompondCmd *cmd			Target compond command pointer
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void execute(int isSimple)</span><br />
+			<b>Funtion Functions</b>: <span>Execute command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int isSimple			Indicating if the command is a simple command
+			</pre>
+			</p>
+			
+			<b>(4) handleInBuff.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">int inHistory(int cur)</span><br />
+			<b>Funtion Functions</b>: <span>Check if the indexed command exists in the history list</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int cur					Index for current command
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern int handleInBuff(void)</span><br />
+			<b>Funtion Functions</b>: <span>Handle the input buffer, listen to up down arrows and tab key</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			</p>
+			
+			<b>(5) handleJob.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">extern Job* addJob(pid_t pid)</span><br />
+			<b>Funtion Functions</b>: <span>Add new job</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				pid_t pid				Process ID.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void rmJob(int sig, siginfo_t *sip, void* noused)</span><br />
+			<b>Funtion Functions</b>: <span>Remove a job</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int sig					Signal
+				siginfo_t *sip			Signal Information
+			</pre>
+			</p>
+			
+			<b>(6) handleSignal.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">extern void ctrl_Z()</span><br />
+			<b>Funtion Functions</b>: <span>Implement Ctrl+Z</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void ctrl_C()</span><br />
+			<b>Funtion Functions</b>: <span>Implement Ctrl+C</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void fg_exec(int pid)</span><br />
+			<b>Funtion Functions</b>: <span>fg command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int pid					Process ID.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void bg_exec(int pid)</span><br />
+			<b>Funtion Functions</b>: <span>bg command</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int pid					Process ID.
+			</pre>
+			
+			<b>(7) search.c</b>
+			<p>
+			<b>Function Format</b>: <span class="grey">void cleanTab()</span><br />
+			<b>Funtion Functions</b>: <span>Clear buffer for tab</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">void sortrecommend()</span><br />
+			<b>Funtion Functions</b>: <span>Sort the matching commands</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern int tabFile(void)</span><br />
+			<b>Funtion Functions</b>: <span>Implement Tab</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				No parameters.
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">int WildCharMatch(char *src, char *pattern, int ignore_case)</span><br />
+			<b>Funtion Functions</b>: <span>Compare string with wildcards</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char *src				Original string
+				char *pattern			String with wildcards
+				int	ignore_case			if ignore case
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void getRegex(int *b, int *e, char *path)</span><br />
+			<b>Funtion Functions</b>: <span>Find the shortest path string with no space between b and e</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				int *b					Starting position of search part in path
+				int *e					Ending position of search part in path
+				char *path				String needing to search wildcards
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern void regexChange(char *origin, char *newarg, unsigned char d_type)</span><br />
+			<b>Funtion Functions</b>: <span>Replace original string with matching item</span><br />
+			<b>Parameters</b>: 
+			<pre>	
+				char *origin			Original string
+				char *newarg			Replaced string
+				unsigned char d_type	Type for matching file
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern int regexNum(char *origin)</span><br />
+			<b>Funtion Functions</b>: <span>Get the number of wildcards</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char *origin			Original string
+			</pre>
+			
+			<b>Function Format</b>: <span class="grey">extern int regexNewArgs(char *origin, char **args, int *index){</span><br />
+			<b>Funtion Functions</b>: <span>Find matching item, replace original string</span><br />
+			<b>Parameters</b>: 
+			<pre>
+				char *origin			Original string
+				char **args				Store new arguments
+				int *index				The argument No. index
+			</pre>
+			</p>
+
 			
 			<h3 id="C3">3 Test and Use Instruction</h3>
 			<h4 id="C31">3.1 Use</h4>

@@ -55,6 +55,7 @@ comments: true
 				<ul><a href="#C22"><b>2.2 Function Design</b></a></ul>
 					<ul><a href="#C221"><small>2.2.1 Important Data Structures</small></a></ul>
 					<ul><a href="#C222"><small>2.2.2 Important Functions and Interfaces</small></a></ul>
+					<ul><a href="#C223"><small>2.2.3 Funtion Call Graph</small></a></ul>
 			<ul><a href="#C3"><strong><big>3. Test and Use Instruction</big></strong></a></ul>
 					<ul><a href="#C31"><b>3.1 Use</b></a></ul>
 					<ul><a href="#C32"><b>3.2 Test</b></a></ul>
@@ -180,6 +181,71 @@ comments: true
 			
 			<h4 id="C22">2.2 Function Design</h4>
 			<h5 id="C221">2.2.1 Important Data Structures</h5>
+<b>(1) Simple Command</b>
+<pre class='grey'>
+typedef struct SimpleCmd {
+        int isBack;     // If in back end
+        char **args;    // Command and arguments
+        char *input;    // Input Redirection
+        char *output;   // Output Redirection
+    } SimpleCmd;
+</pre>
+<p>
+Simple Command consists of four part.<br />
+When isBack is 1, it indicates this command will be executed in back end, or in front end.<br />
+**args stores command and its arguments. *args[0] is the command, the rest is its arguments.<br />
+*input is the file for input redirection. NULL when no redirection.<br />
+*output is the file for output redirection. NULL when no redirection.
+</p>
+<br />
+
+<b>(2) Compond Command</b>
+<pre class='grey'>
+typedef struct CompondCmd{
+        int isBack;
+        SimpleCmd **simCmd;
+    } CompondCmd;
+</pre>
+<p>
+Compond Command consists of two parts.<br />
+When isBack is 1, it indicates this command will be executed in back end, or in front end.<br />
+**simCmd is a series of simple commands. These simple commands make up this compond command.
+</p>
+<br />
+
+<b>(3) History Commands</b>
+<pre class='grey'>
+typedef struct History {
+        int start;                  
+        int end;                   
+        int cur;
+        char cmds[HISTORY_LEN][100]; 
+    } History;
+</pre>
+<p>
+History Commands consists of four parts.<br />
+The first three are integers, indicating the starting index, ending index and current index respectively.<br />
+cmds{HISTORY_LEN][100] is the array to store history commands, it can store HISTORY_LEN(default 100) commands.
+</p>
+<br />
+
+<b>(4) Job</b>
+<pre class='grey'>
+typedef struct Job {
+        int pid;         
+        char cmd[100];   
+        char state[10];  
+        struct Job *next;
+    } Job;
+</pre>
+<p>
+Each item of job link list has four parts.<br />
+pid is the process id.<br />
+cmd[100] is the command string.<br/>
+state[10] is the state of the job.<br />
+*next points to next job on the list.
+</p>
+
 			<h5 id="C222">2.2.2 Important Functions and Interfaces</h5>
 <b>(1) bison.tab.c</b>
 <p>
@@ -461,6 +527,8 @@ comments: true
 </p>
 
 
+			<h5 id="C223">2.2.3 Function Call Graph</h5>
+			<img src="{{ site.url }}images/linux_1/20.jpg"  alt="" />
 			
 			<h3 id="C3">3 Test and Use Instruction</h3>
 			<h4 id="C31">3.1 Use</h4>

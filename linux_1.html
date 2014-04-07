@@ -49,7 +49,7 @@ comments: true
 					<ul><a href="#C213"><small>2.1.3 Terminal Control Procedure Graph</small></a></ul>
 					<ul><a href="#C214"><small>2.1.4 Tab Making Up Procedure Graph</small></a></ul>
 					<ul><a href="#C215"><small>2.1.5 Simple Commands Execution Procedure Graph</small></a></ul>
-					<ul><a href="#C216"><small>2.1.6 Complex Commands Execution Procedure Graph</small></a></ul>
+					<ul><a href="#C216"><small>2.1.6 Compond Commands Execution Procedure Graph</small></a></ul>
 					<ul><a href="#C217"><small>2.1.7 Wildcard Procedure</small></a></ul>
 					<ul><a href="#C218"><small>2.1.8 Use Case Graph</small></a></ul>	
 				<ul><a href="#C22"><b>2.2 Function Design</b></a></ul>
@@ -96,28 +96,36 @@ comments: true
 			<h4 id="C13">1.3 Self-improved Functions</h4>
 			<h5 id="C131">1.3.1 Up and Down Arrows</h5>
 			<p>Through I/O programming, the code for up and down arrows won't be displayed on the screen, instead it will scan through the history commands.</p>
-			
 			<h5 id="C132">1.3.2 Tab Key</h5>
 			<p>Through I/O programming, the code for tab key won't be displayed on the screen. Instead, you can use tab key to make up command like real shells. If there are more that one commands that matach the head, all of the possible commands will be displayed with another hit on Tab key.</p>
-			
 			<h5 id="C133">1.3.3 Backspace Key</h5>
 			<p>Through I/O programming, the code for backspace key won't be displayed on the screan. instead we implemented its delete function.</p>
-			
 			<h5 id="C134">1.3.4 Improved Grammar</h5>
-			<p>The improved grammar provides support for wildcards and complex commands with pipes.</p>
-			
+			<p>The improved grammar provides support for wildcards and compond commands with pipes.</p>
 			<h5 id="C135">1.3.5 Method of giving results of backend command</h5>
 			<p>The results for back end command will not be printed until next hit on enter key after finished.</p>
 			
 			<h3 id="C2">2 Design Description</h3>
-			
 			<h4 id="C21">2.1 Structure Design</h4>
 			<h5 id="C211">2.1.1 Grammar State Graph</h5>
+			<b>(1) Command Line: line</b>
+			<img src="{{ site.url }}image/linux_1/1.jpg"  alt="" />
+			<b>(2) Command: command</b>
+			<b>(3) Front End Commands: fgCommand</b>
+			<b>(4) Simple Commands: simpleCmd</b>
+			<b>(5) Compond Commands: compondCmd</b>
+			<b>(6) Next COmmand: nextCmd</b>
+			<b>(7) Program Calls: ProgInvocation</b>
+			<b>(8) Input Redirection: inputRedirect</b>
+			<b>(9) Output Redirection: outputRedirect</b>
+			<b>(10) Command Arguments: args</b>
+			<b>(11) String: STR</b>
+			<b>(12) Wildcards: rex</b>
 			<h5 id="C212">2.1.2 Program Structure Graph</h5>
 			<h5 id="C213">2.1.3 Terminal Control Procedure Graph</h5>
 			<h5 id="C214">2.1.4 Tab Making Up Procedure Graph</h5>
 			<h5 id="C215">2.1.5 Simple Commands Execution Procedure Graph</h5>
-			<h5 id="C216">2.1.6 Complex Commands Execution Procedure Graph</h5>
+			<h5 id="C216">2.1.6 Compond Commands Execution Procedure Graph</h5>
 			<h5 id="C217">2.1.7 Wildcard Procedure</h5>
 			<h5 id="C218">2.1.8 Use Case Graph</h5>
 			
